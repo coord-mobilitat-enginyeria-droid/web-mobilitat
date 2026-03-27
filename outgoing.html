@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estudiar Enginyeria fora — Mobilitat — Escola d'Enginyeria UPF</title>
+<style>
+/* ── Reset i base (simula Liferay) ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.6; background: #f5f5f5; }
+.upf__limit-page-width { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* ── Breadcrumb ── */
+.breadcrumb { font-size: 0.8em; color: #888; padding: 12px 0; }
+.breadcrumb a { color: #c8102e; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.hero-img {
+  width: 100%;
+  aspect-ratio: 21 / 7;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  padding: 40px 28px 20px;
+  color: #fff;
+}
+.hero-title { font-size: 1.8em; font-weight: 700; margin-bottom: 4px; }
+.hero-subtitle { font-size: 0.95em; opacity: 0.85; }
+.hero-stats { display: flex; gap: 28px; margin-top: 10px; }
+.hero-stat { text-align: center; }
+.hero-stat-num { font-size: 1.6em; font-weight: 700; }
+.hero-stat-label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; }
+
+/* ── Info cards grid ── */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.info-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border-top: 3px solid #c8102e;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.info-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+.info-card-icon { font-size: 1.8em; margin-bottom: 8px; }
+.info-card h3 { font-size: 0.95em; font-weight: 700; margin-bottom: 6px; color: #333; }
+.info-card p { font-size: 0.82em; color: #666; line-height: 1.5; }
+
+/* ── Seccions ── */
+h2.section-title {
+  font-size: 1.25em;
+  color: #c8102e;
+  border-bottom: 2px solid #c8102e;
+  padding-bottom: 6px;
+  margin: 32px 0 16px;
+}
+
+/* ── Acordeó ── */
+.accordion { margin-bottom: 8px; }
+.accordion-header {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 14px 18px;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+.accordion-header:hover { background: #fafafa; }
+.accordion-header::after {
+  content: "›";
+  font-size: 1.4em;
+  font-weight: 300;
+  transition: transform 0.25s;
+  color: #c8102e;
+}
+.accordion.open .accordion-header::after { transform: rotate(90deg); }
+.accordion-body {
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  padding: 16px 18px;
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+.accordion.open .accordion-body { display: block; }
+.accordion-body ul, .accordion-body ol { margin: 8px 0 8px 20px; }
+.accordion-body a { color: #c8102e; }
+
+/* ── Tornar ── */
+.back-link {
+  display: inline-block;
+  margin: 32px 0;
+  color: #c8102e;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.3em; }
+  .hero-stats { gap: 16px; }
+  .hero-stat-num { font-size: 1.2em; }
+  .info-cards { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="upf__limit-page-width">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="#">Enginyeria</a> › <a href="#">Mobilitat</a> › Estudiar fora
+  </nav>
+
+  <!-- Hero amb mapa -->
+  <div class="hero">
+    <img class="hero-img" src="card_estudiar_fora.svg" alt="Mapa de destinacions">
+    <div class="hero-overlay">
+      <div class="hero-title">Estudiar Enginyeria fora</div>
+      <div class="hero-subtitle">Programes Erasmus+, SICUE i acords bilaterals</div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">37</div>
+          <div class="hero-stat-label">Universitats</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">22</div>
+          <div class="hero-stat-label">Països</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">5</div>
+          <div class="hero-stat-label">Continents</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 cards de navegació -->
+  <div class="info-cards">
+    <a class="info-card" href="out_1_vull_marxar.html">
+      <div class="info-card-icon">&#127758;</div>
+      <h3>Vull marxar</h3>
+      <p>Destins, programes i requisits</p>
+    </a>
+    <a class="info-card" href="out_2_convocatories.html">
+      <div class="info-card-icon">&#128197;</div>
+      <h3>Convocatòries</h3>
+      <p>Terminis, sol·licitud i beques</p>
+    </a>
+    <a class="info-card" href="out_3_ja_tinc_placa.html">
+      <div class="info-card-icon">&#9989;</div>
+      <h3>Ja tinc plaça</h3>
+      <p>Acord d'estudis, matrícula i visat</p>
+    </a>
+    <a class="info-card" href="out_4_durant_despres.html">
+      <div class="info-card-icon">&#9992;&#65039;</div>
+      <h3>Durant i després</h3>
+      <p>Primers passos, canvis i reconeixement</p>
+    </a>
+  </div>
+
+  <!-- ══ Peça 12: FAQ (transversal) ══ -->
+  <h2 class="section-title">Preguntes freqüents</h2>
+
+  <div class="accordion">
+    <button class="accordion-header">Puc reconèixer el TFG durant la mobilitat?</button>
+    <div class="accordion-body">
+      <p>No, no es podrà reconèixer el Treball de Fi de Grau en cap de les seves modalitats.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header">Puc realitzar el TFG durant la mobilitat?</button>
+    <div class="accordion-body">
+      <p>Sí, es podrà treballar a distància durant l'estada si el director del teu TFG (UPF) hi està d'acord.</p>
+      <p>El TFG el pots començar a la UPF (per exemple, si el 1r trimestre estàs aquí) i continuar-lo a distància amb el teu director de la UPF. O bé començar-lo 100% a distància si el director hi està d'acord. Si trobes un director que te'l porti a la universitat de destinació, podries fer-lo amb aquesta persona també, però sempre amb la supervisió d'un director de la UPF.</p>
+      <p>Hauràs de presentar la memòria del TFG al juny i defensar-lo a la UPF al juliol. En cas que al juliol encara estiguis fent l'estada de mobilitat, es pot autoritzar fer la defensa del TFG online.</p>
+      <p>Per últim, no es pot fer una estada de mobilitat per fer exclusivament el TFG ja que aquest no es reconeix i, per tant, no compta dins dels crèdits mínims a superar per obtenir la beca de mobilitat.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header">Què passa amb les assignatures obligatòries quan marxo d'intercanvi?</button>
+    <div class="accordion-body">
+      <p>Sovint no és possible trobar reconeixements per a totes les obligatòries. En aquests casos, pots optar per una de les següents opcions:</p>
+      <ul>
+        <li>Demanar una progressió als estudis per tal de fer-les abans.</li>
+        <li>Deixar-les per més endavant, quan tornis de l'estada.</li>
+        <li>En cas que es tracti d'una obligatòria suspesa, l'hauràs de matricular per força amb el corresponent recàrrec.</li>
+        <li><a href="https://seuelectronica.upf.edu/normativa-academica-grau">La Normativa acadèmica dels ensenyaments de grau</a>, article 8.4 diu: 8.4.1. No es procedirà al reconeixement d'una assignatura de la UPF ni aquesta podrà formar part d'una taula de reconeixement de crèdits entre dos estudis quan es produeixi algun dels supòsits següents: b) Si l'estudiant s'ha examinat de l'assignatura objecte de reconeixement en l'estudi actual.</li>
+        <li>Comentar la teva situació al coordinador o coordinadora que impartirà l'assignatura per si et permet seguir-la a distància o et dóna alguna altra opció.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header">Puc reconèixer crèdits d'idiomes?</button>
+    <div class="accordion-body">
+      <p>Els crèdits d'idiomes que hagis cursat durant la teva estada de mobilitat no es poden reconèixer. Tot i això, t'animem a aprendre l'idioma del país que t'acull i a aprofitar l'estada per fer la formació que complementi els teus coneixements.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header">Puc fer pràctiques durant la mobilitat?</button>
+    <div class="accordion-body">
+      <p>Per optar a una beca <a href="https://www.upf.edu/web/estudiarfora/erasmus-practiques">Erasmus Pràctiques</a>, part del programa Erasmus+, t'has de presentar a la convocatòria corresponent. En aquest cas, hauràs de trobar una empresa a Europa que et vulgui acollir i es comprometi a garantir-te un període de pràctiques vinculades a la teva formació.</p>
+      <p>A banda del programa Erasmus Pràctiques, si decideixes fer pràctiques a l'estranger durant la teva mobilitat, no podràs incorporar aquestes pràctiques a l'acord de mobilitat, ja que no comptaran com a crèdits de mobilitat. En aquest cas, hauràs de passar pel <a href="https://www.upf.edu/web/enginyeria/fer-practiques">programa UPF de pràctiques</a> i complir amb els procediments i normativa d'aquest programa.</p>
+      <p>El no compliment del mínim de <strong>15 crèdits</strong> a incorporar i aprovar podrà comportar el retorn de la beca.</p>
+    </div>
+  </div>
+
+  <!-- ══ Peça 7: Contactes ══ -->
+  <h2 class="section-title">Tens dubtes?</h2>
+
+  <div class="accordion open">
+    <button class="accordion-header">Contacte i suport</button>
+    <div class="accordion-body">
+      <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px 0; vertical-align:top; width:45%;"><strong>OMA (Oficina de Mobilitat i Acollida)</strong><br><span style="color:#666;">Convocatòria i resolució places mobilitat, beques, requisits idiomes, Erasmus pràctiques</span></td>
+          <td style="padding:8px 0; vertical-align:top;">Consultes via <a href="https://cau.upf.edu/estudis">CAU</a><br>Telèfon 935 422 411 (de dilluns a dimecres de 10.00 a 12.00 h)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px 0; vertical-align:top;"><strong>Coordinador de mobilitat</strong><br><span style="color:#666;">Assessorament acadèmic: reconeixements, contingut assignatures, qualificacions</span></td>
+          <td style="padding:8px 0; vertical-align:top;">Alfonso Martínez — <a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Campus Poblenou, despatx 55.204<br>Telèfon 935 422 922</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 0; vertical-align:top;"><strong>Secretaria de l'Escola d'Enginyeria</strong><br><span style="color:#666;">Matrícula assignatures, recepció i incorporació notes a l'expedient</span></td>
+          <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> o <a href="https://cau.upf.edu/estudis">Centre d'Atenció a l'Usuari (CAU)</a><br>Campus Poblenou, despatx 55.014<br>Telèfon 935 422 667</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Tornar -->
+  <a href="mobilitat_nova.html" class="back-link">&larr; Tornar a Mobilitat</a>
+
+</div>
+
+<script>
+document.querySelectorAll('.accordion-header').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>

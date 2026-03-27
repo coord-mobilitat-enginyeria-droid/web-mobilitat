@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incoming Students — School of Engineering — UPF</title>
+<style>
+/* ── Reset i base ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.6; background: #f5f5f5; }
+.upf__limit-page-width { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* ── Breadcrumb ── */
+.breadcrumb { font-size: 0.8em; color: #888; padding: 12px 0; }
+.breadcrumb a { color: #c8102e; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.hero-img {
+  width: 100%;
+  aspect-ratio: 21 / 7;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  padding: 40px 28px 20px;
+  color: #fff;
+}
+.hero-title { font-size: 1.8em; font-weight: 700; margin-bottom: 4px; }
+.hero-subtitle { font-size: 0.95em; opacity: 0.85; }
+
+/* ── Info cards grid ── */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.info-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border-top: 3px solid #c8102e;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.info-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+.info-card-icon { font-size: 1.8em; margin-bottom: 8px; }
+.info-card h3 { font-size: 0.95em; font-weight: 700; margin-bottom: 6px; color: #333; }
+.info-card p { font-size: 0.82em; color: #666; line-height: 1.5; }
+
+/* ── Seccions ── */
+h2.section-title {
+  font-size: 1.25em;
+  color: #c8102e;
+  border-bottom: 2px solid #c8102e;
+  padding-bottom: 6px;
+  margin: 32px 0 16px;
+}
+
+/* ── Acordeó ── */
+.accordion { margin-bottom: 8px; }
+.accordion-header {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 14px 18px;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+.accordion-header:hover { background: #fafafa; }
+.accordion-header::after {
+  content: "›";
+  font-size: 1.4em;
+  font-weight: 300;
+  transition: transform 0.25s;
+  color: #c8102e;
+}
+.accordion.open .accordion-header::after { transform: rotate(90deg); }
+.accordion-body {
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  padding: 16px 18px;
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+.accordion.open .accordion-body { display: block; }
+.accordion-body ul, .accordion-body ol { margin: 8px 0 8px 20px; }
+.accordion-body a { color: #c8102e; }
+
+/* ── Tornar ── */
+.back-link {
+  display: inline-block;
+  margin: 32px 0;
+  color: #c8102e;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.3em; }
+  .info-cards { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="upf__limit-page-width">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="#">Engineering</a> › <a href="#">Mobility</a> › Incoming Students
+  </nav>
+
+  <!-- Hero amb skyline -->
+  <div class="hero">
+    <img class="hero-img" src="card_incoming.svg" alt="Barcelona skyline">
+    <div class="hero-overlay">
+      <div class="hero-title">Incoming Students</div>
+      <div class="hero-subtitle">Study at UPF School of Engineering</div>
+    </div>
+  </div>
+
+  <!-- 4 cards de navegació -->
+  <div class="info-cards">
+    <a class="info-card" href="in_1_why_upf.html">
+      <div class="info-card-icon">&#127891;</div>
+      <h3>Why UPF Engineering?</h3>
+      <p>Programmes, campus and Barcelona</p>
+    </a>
+    <a class="info-card" href="in_2_how_to_apply.html">
+      <div class="info-card-icon">&#128221;</div>
+      <h3>How to apply</h3>
+      <p>Nomination, deadlines and requirements</p>
+    </a>
+    <a class="info-card" href="in_3_prepare_stay.html">
+      <div class="info-card-icon">&#128218;</div>
+      <h3>Prepare your stay</h3>
+      <p>Courses, Learning Agreement and visa</p>
+    </a>
+    <a class="info-card" href="in_4_during_after.html">
+      <div class="info-card-icon">&#9992;&#65039;</div>
+      <h3>During &amp; after</h3>
+      <p>Orientation, support and transcript</p>
+    </a>
+  </div>
+
+  <!-- ══ Peça 19: Contact information ══ -->
+  <h2 class="section-title">Contact</h2>
+
+  <div class="accordion open">
+    <button class="accordion-header">Who to contact</button>
+    <div class="accordion-body">
+      <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px 0; vertical-align:top; width:45%;"><strong><a href="https://www.upf.edu/web/incoming">Mobility Office (OMA)</a></strong><br><span style="color:#666;">Registration, adding and dropping subjects, transcripts and confirmation of arrivals/departures</span></td>
+          <td style="padding:8px 0; vertical-align:top;"><a href="mailto:oma.incoming@upf.edu">oma.incoming@upf.edu</a><br>Ciutadella Campus, office 40.167<br>Poblenou Campus, office 52.001<br>Phone (+34) 935 421 264</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px 0; vertical-align:top;"><strong>Mobility coordinator, Alfonso Martínez</strong><br><span style="color:#666;">Academic information about subjects, curricular issues and signing learning agreements</span></td>
+          <td style="padding:8px 0; vertical-align:top;"><a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Poblenou Campus, office 55.204<br>Phone 935 422 922</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 0; vertical-align:top;"><strong>School of Engineering Secretary</strong><br><span style="color:#666;">Information regarding syllabus, lecture and exams schedules</span></td>
+          <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> or <a href="https://cau.upf.edu/estudis">CAU</a><br>Poblenou Campus, office 55.014<br>Phone 935 421 574</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Tornar -->
+  <a href="mobilitat_nova.html" class="back-link">&larr; Back to Mobility</a>
+
+</div>
+
+<script>
+document.querySelectorAll('.accordion-header').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
