@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vull marxar — Mobilitat — Escola d'Enginyeria UPF</title>
+<title>Vull fer una mobilitat | Mobilitat | Escola d'Enginyeria UPF</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.6; background: #f5f5f5; }
@@ -12,12 +12,25 @@ body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.
 .breadcrumb a { color: #c8102e; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
 h1.page-title { font-size: 1.5em; color: #333; margin: 16px 0 24px; }
+.hero { position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.hero-img { width: 100%; aspect-ratio: 21 / 7; object-fit: cover; display: block; }
+.hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.65)); padding: 32px 24px 18px; color: #fff; pointer-events: none; }
+.hero-title { font-size: 1.6em; font-weight: 700; margin-bottom: 4px; }
+.hero-subtitle { font-size: 0.9em; opacity: 0.85; }
 h2.section-title { font-size: 1.15em; color: #c8102e; border-bottom: 2px solid #c8102e; padding-bottom: 6px; margin: 28px 0 14px; }
 h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
 .content-block { background: #fff; border-radius: 6px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); font-size: 0.92em; line-height: 1.7; }
 .content-block ul, .content-block ol { margin: 8px 0 8px 20px; }
 .content-block a { color: #c8102e; }
 .callout { background: #fef3f3; border-left: 4px solid #c8102e; padding: 12px 16px; margin: 12px 0; font-size: 0.9em; border-radius: 0 4px 4px 0; }
+table.programes { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 0.92em; }
+table.programes th, table.programes td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #eee; }
+table.programes thead th { background: #f7f4ec; color: #555; font-size: 0.82em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 2px solid #c8102e; }
+table.programes tbody tr:hover { background: #fafafa; }
+table.programes td:first-child { font-weight: 600; color: #c8102e; white-space: nowrap; }
+ul.calendari { margin: 12px 0 18px 20px; }
+ul.calendari li { margin-bottom: 4px; }
+ul.calendari .data { font-weight: normal; }
 .back-link { display: inline-block; margin: 32px 0; color: #c8102e; text-decoration: none; font-size: 0.9em; font-weight: 600; }
 .back-link:hover { text-decoration: underline; }
 </style>
@@ -26,28 +39,108 @@ h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
 <div class="upf__limit-page-width">
 
   <nav class="breadcrumb">
-    <a href="#">Enginyeria</a> › <a href="#">Mobilitat</a> › <a href="outgoing.html">Estudiar fora</a> › Vull marxar
+    <a href="#">Enginyeria</a> › <a href="#">Mobilitat</a> › <a href="outgoing.html">Estudiar fora</a> › Vull fer una mobilitat
   </nav>
 
-  <h1 class="page-title">Vull marxar</h1>
-
-  <!-- ══ Peça 1: Vull fer una mobilitat ══ -->
-  <div class="content-block">
-    <h3>Vull fer una mobilitat</h3>
-    <p>Si vols fer una estada a l'estranger a 3r o 4t curs, la UPF t'ofereix diferents programes de mobilitat:</p>
-    <ul>
-      <li>Estudiar a una universitat europea a través del programa <strong>Erasmus</strong>, o bé sortir fora d'Europa amb un <strong>conveni bilateral</strong>.</li>
-      <li>Estudiar a l'Estat espanyol amb el programa <strong>SICUE</strong>.</li>
-      <li>Fer pràctiques a Europa amb l'<strong>Erasmus Pràctiques</strong>.</li>
-      <li>Realitzar una estada solidària a l'estiu amb el programa <strong>MApS</strong>.</li>
-    </ul>
-    <p>Tota la <strong>informació</strong> la trobaràs a la pàgina web de l'<a href="https://www.upf.edu/web/estudiarfora">Oficina de Mobilitat i Acollida</a> (OMA): <em>Estudiar Fora</em>. Consulta-la i fixa't en els <strong>requisits</strong> que has de complir, el <a href="https://www.upf.edu/web/estudiarfora/com-pots-participar">calendari de les sessions informatives</a> i els <strong>terminis</strong> de presentació de sol·licituds.</p>
+  <div class="hero">
+    <object class="hero-img" data="card_estudiar_fora_interactive.svg" type="image/svg+xml" aria-label="Mapa de destinacions (passa el cursor pels punts per veure les universitats)"></object>
+    <div class="hero-overlay">
+      <div class="hero-title">Vull fer una mobilitat</div>
+      <div class="hero-subtitle">Erasmus+, SICUE, Pràctiques i MApS</div>
+    </div>
   </div>
 
-  <!-- ══ Peça 2: Ets de primer curs? ══ -->
+  <h2 class="section-title">Programes de mobilitat</h2>
+
+  <p>A l'Escola d'Enginyeria et pots plantejar fer una mobilitat durant el grau a través de quatre programes diferents: estades acadèmiques (Erasmus i convenis bilaterals, SICUE) i MApS, coordinats per l'<a href="https://www.upf.edu/web/estudiarfora">Oficina de Mobilitat i Acollida (OMA)</a>, i Erasmus+ Pràctiques, gestionat per <a href="https://www.upf.edu/web/carreres-professionals">Carreres Professionals</a>:</p>
+
+  <table class="programes">
+    <thead>
+      <tr><th>Programa</th><th>On?</th><th>Durada</th><th>Quan?</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.upf.edu/web/estudiarfora/estudiar-a-estranger">Erasmus / conveni bilateral</a></td>
+        <td>Universitat europea (Erasmus) o resta del món (conveni bilateral)</td>
+        <td>1-2 trimestres o curs sencer</td>
+        <td>3r o 4t curs del grau</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.upf.edu/web/estudiarfora/estudiar-a-espanya">SICUE</a></td>
+        <td>Una altra universitat espanyola</td>
+        <td>1 trimestre o curs sencer</td>
+        <td>3r o 4t curs del grau</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.upf.edu/web/carreres-professionals/erasmus-practiques">Erasmus+ Pràctiques</a></td>
+        <td>Empresa o institució a la UE (excepte Espanya)</td>
+        <td>2-4 mesos finançats (mínim 2)</td>
+        <td>Durant o just després dels estudis</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.upf.edu/web/estudiarfora/programa-maps">MApS</a></td>
+        <td>Programes d'Aprenentatge i Servei amb compromís social</td>
+        <td>Setmanes a mesos, segons plaça</td>
+        <td>Juny-setembre, durant els estudis</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Per a cada programa hi trobaràs els requisits, els terminis, els ajuts disponibles i la documentació a l'enllaç corresponent.</p>
+
+  <h2 class="section-title">Estades acadèmiques: quan i on marxar?</h2>
+
+  <p>L'estada es pot fer a 3r o 4t curs. És recomanable fer-la a <strong>4t</strong>, quan ja tens superades les obligatòries de 1r i 2n. A l'estada has de cursar assignatures que tinguin reconeixement amb el teu pla d'estudis. Es poden reconèixer com a <strong>obligatòries o optatives del teu pla</strong> (si el contingut hi correspon) o com a <strong>crèdits optatius de mobilitat</strong> (per al contingut sense correspondència UPF, i dins dels límits establerts pel teu <a href="https://www.upf.edu/web/enginyeria/graus">pla d'estudis</a>). La <a href="https://docs.google.com/spreadsheets/d/18QvzdBXMBDhLBcxU4OUP2a96y-xlbbk68d9e2bJd2gQ">taula de reconeixements aprovats</a> els últims anys et pot orientar.</p>
+
+  <p>Una estada pot durar un trimestre, un semestre o un curs sencer. Un semestre a destí sol equivaler a 30 ECTS, és a dir, dos dels nostres trimestres. Els semestres a destí comencen habitualment a l'agost-setembre (primer semestre) o al gener-febrer (segon semestre), segons la universitat, i es poden combinar amb un o dos trimestres a la UPF.</p>
+
+  <p>Tingues en compte dues coses: el <em>Treball de Fi de Grau (TFG)</em> no es pot fer durant la mobilitat: s'ha de matricular i tramitar a la UPF i has de matricular un mínim de <em>15 ECTS per trimestre/semestre</em> per tenir dret a la beca de mobilitat.</p>
+
+  <div style="background: #fff8e1; border: 1px dashed #d4a843; padding: 12px 16px; margin: 16px 0; font-size: 0.9em; color: #555; border-radius: 4px;">
+    <strong style="color: #8a6300;">PENDENT</strong> — decidir com mostrar la llista de destinacions:
+    <br><strong>A)</strong> Enllaç a <a href="https://www.upf.edu/web/estudiarfora/destinacions">OMA Destinacions</a> i l'equivalent SICUE (esforç mínim)
+    <br><strong>B)</strong> Taula estàtica generada del xlsx, agrupada per país o programa (manteniment moderat)
+    <br><strong>C)</strong> Enriquir les popups del mapa amb places ofertades i nivell de competitivitat (xlsx assignació 26-27)
+  </div>
+
+  <div style="background: #fff8e1; border: 1px dashed #d4a843; padding: 12px 16px; margin: 16px 0; font-size: 0.9em; color: #555; border-radius: 4px;">
+    <strong style="color: #8a6300;">PENDENT</strong> — possible afegit (basat en Dret):
+    <br><em>Context d'idioma per país</em>: orientació breu (DE/NL/SE → oferta àmplia en anglès; FR/IT → reduïda; el nivell exigit el posa cada universitat de destí)
+  </div>
+
+
+  <h2 class="section-title">Sessions i calendari</h2>
+
+  <p>Si ets de <strong>primer curs</strong>, mira i escolta la <a href="https://drive.google.com/file/d/1VULUifZ4pSa4akY29-rEJjZsjOejXpTz/view">sessió informativa</a> del 3 de febrer de 2026.</p>
+
+  <!-- TODO Alfonso: confirm if the school still runs this annual session, and add the date / recording link -->
+  <p>Si ets de <strong>segon curs</strong>, mira i escolta la sessió informativa sobre <strong>Optatives, Pràctiques, TFG i Mobilitat</strong> del [data per anunciar].</p>
+
+  <p>Si ets de <strong>segon, tercer o quart curs</strong>, aquestes són les dates clau per a la convocatòria internacional 26-27:</p>
+  <ul class="calendari">
+    <li><span class="data">2 de novembre de 2025:</span> data límit per acreditar l'idioma (vegeu la <a href="https://drive.google.com/file/d/1eE3e-HhMuGiOxWFyn-NI_rhV6XOdXAvb/view?usp=sharing">sessió informativa d'acreditació d'idiomes</a> del 3 d'octubre)</li>
+    <li><span class="data">3-7 de novembre de 2025:</span> sol·licitud de places (vegeu la <a href="https://www.youtube.com/watch?v=zuzynHo8JIE">gravació de la sessió informativa de la convocatòria</a>)</li>
+    <li><span class="data">Segona quinzena de febrer de 2026:</span> assignació definitiva de places</li>
+  </ul>
+
+  <!-- Contacte -->
+  <!-- LIFERAY MIGRATION NOTE: el bloc de contacte es repeteix a outgoing.html, out_1_vull_marxar.html, out_2_convocatories.html, out_3_ja_tinc_placa.html i out_4_durant_despres.html. En migrar a Liferay, crea un únic Web Content reutilitzable per al bloc i referencia'l des de cada pàgina perquè només calgui editar-lo en un lloc. -->
+  <h2 class="section-title">Contacte i suport</h2>
   <div class="content-block">
-    <h3>Ets de primer curs?</h3>
-    <p>Mira i escolta la <a href="https://drive.google.com/file/d/1VULUifZ4pSa4akY29-rEJjZsjOejXpTz/view">sessió informativa</a> del passat 3 de febrer del 2026.</p>
+    <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top; width:45%;"><strong>OMA (Oficina de Mobilitat i Acollida)</strong><br><span style="color:#666;">Convocatòria i resolució places mobilitat, beques, requisits idiomes, Erasmus pràctiques</span></td>
+        <td style="padding:8px 0; vertical-align:top;">Consultes via <a href="https://cau.upf.edu/estudis">CAU</a><br>T. +34 935 422 411 (dilluns a dimecres, 10.00–12.00 h)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top;"><strong>Coordinador de mobilitat, Alfonso Martínez</strong><br><span style="color:#666;">Assessorament acadèmic: reconeixements, contingut d'assignatures, qualificacions</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Campus Poblenou, despatx 55.204<br>T. +34 935 422 922</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; vertical-align:top;"><strong>Secretaria de l'Escola d'Enginyeria</strong><br><span style="color:#666;">Matrícula d'assignatures, recepció i incorporació de notes a l'expedient</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> o <a href="https://cau.upf.edu/estudis">CAU</a><br>Campus Poblenou, despatx 55.014<br>T. +34 935 422 667</td>
+      </tr>
+    </table>
   </div>
 
   <a href="outgoing.html" class="back-link">← Tornar a Estudiar fora</a>

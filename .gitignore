@@ -1,0 +1,35 @@
+# Allowlist-style .gitignore: everything is ignored by default,
+# only explicitly !unignored files are tracked.
+
+# Ignore everything by default
+*
+
+# But keep directories navigable so we can unignore files within
+!*/
+
+# --- Product files (tracked) ---
+!.gitignore
+!CLAUDE.md
+!generate_map.py
+!destinacions_upf.csv
+!ne_110m_land.geojson
+
+# Landing + navigation
+!mobilitat_nova.html
+!incoming.html
+!outgoing.html
+
+# Incoming subpages (current 2-page structure)
+!in_1_why_upf.html
+!in_2_academic.html
+
+# Outgoing subpages
+!out_1_vull_marxar.html
+!out_2_convocatories.html
+!out_3_ja_tinc_placa.html
+!out_4_durant_despres.html
+
+# Images / SVGs
+!card_estudiar_fora.svg
+!card_estudiar_fora_interactive.svg
+!card_incoming.svg

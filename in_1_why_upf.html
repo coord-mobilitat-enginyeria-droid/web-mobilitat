@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Why UPF Engineering? — Incoming Students — UPF</title>
+<title>Why UPF Engineering? | Incoming Students | UPF</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.6; background: #f5f5f5; }
@@ -12,11 +12,25 @@ body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.
 .breadcrumb a { color: #c8102e; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
 h1.page-title { font-size: 1.5em; color: #333; margin: 16px 0 24px; }
+.hero { position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.hero-img { width: 100%; aspect-ratio: 21 / 7; object-fit: cover; display: block; }
+.hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.65)); padding: 32px 24px 18px; color: #fff; }
+.hero-title { font-size: 1.6em; font-weight: 700; margin-bottom: 4px; }
+.hero-subtitle { font-size: 0.9em; opacity: 0.85; }
 h2.section-title { font-size: 1.15em; color: #c8102e; border-bottom: 2px solid #c8102e; padding-bottom: 6px; margin: 28px 0 14px; }
 h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
 .content-block { background: #fff; border-radius: 6px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); font-size: 0.92em; line-height: 1.7; }
 .content-block ul, .content-block ol { margin: 8px 0 8px 20px; }
 .content-block a { color: #c8102e; }
+.degree-list { list-style: none; margin: 12px 0 0 0; }
+.degree-list li { padding: 10px 0; border-bottom: 1px solid #eee; }
+.degree-list li:last-child { border-bottom: none; }
+.degree-list strong { color: #c8102e; }
+.callout { background: #fef3f3; border-left: 4px solid #c8102e; padding: 12px 16px; margin: 12px 0; font-size: 0.9em; border-radius: 0 4px 4px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin: 16px 0 4px; }
+.stat { text-align: center; padding: 12px 8px; background: #f7f4ec; border-radius: 4px; }
+.stat-num { font-size: 1.6em; font-weight: 700; color: #c8102e; }
+.stat-label { font-size: 0.78em; color: #555; line-height: 1.3; margin-top: 4px; }
 .back-link { display: inline-block; margin: 32px 0; color: #c8102e; text-decoration: none; font-size: 0.9em; font-weight: 600; }
 .back-link:hover { text-decoration: underline; }
 </style>
@@ -28,19 +42,82 @@ h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
     <a href="#">Engineering</a> › <a href="#">Mobility</a> › <a href="incoming.html">Incoming Students</a> › Why UPF Engineering?
   </nav>
 
-  <h1 class="page-title">Why UPF Engineering?</h1>
-
-  <!-- ══ Peça 14 (fragment): Welcome ══ -->
-  <div class="content-block">
-    <h2 class="section-title">Welcome</h2>
-    <p>Thank you for your interest in studying at the UPF in the framework of exchange mobility programs.</p>
-    <p>The School of Engineering offers Incoming Exchange Students a great variety of subjects to choose from.</p>
+  <div class="hero">
+    <img class="hero-img" src="card_incoming.svg" alt="Barcelona skyline">
+    <div class="hero-overlay">
+      <div class="hero-title">Why UPF Engineering?</div>
+      <div class="hero-subtitle">Study at UPF School of Engineering</div>
+    </div>
   </div>
 
-  <!-- ══ Peça 15: Campus ══ -->
+  <!-- About the School + Department -->
   <div class="content-block">
-    <h2 class="section-title">Campus</h2>
-    <p>ICT Bachelor's degrees lessons are entirely in <a href="https://www.upf.edu/web/campus/campus-poblenou">Poblenou Campus</a>. However, Bachelor's Degree in Biomedical Engineering has lessons in Poblenou Campus and in <a href="https://www.upf.edu/web/campus/campus-mar">Mar Campus</a>.</p>
+    <h2 class="section-title">A combined school and research department</h2>
+    <p>UPF's <strong>School of Engineering</strong> and <strong>Department of Engineering</strong> form a single academic unit at <a href="https://www.upf.edu/en/home">Universitat Pompeu Fabra</a>, a young public university in Barcelona. Teaching and research happen under one roof, so undergraduate and exchange students share the campus with the research groups that produce it.</p>
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-num">1,055</div><div class="stat-label">Bachelor's<br>students</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">Bachelor's<br>programmes</div></div>
+      <div class="stat"><div class="stat-num">276</div><div class="stat-label">Master's<br>students</div></div>
+      <div class="stat"><div class="stat-num">185</div><div class="stat-label">PhD<br>candidates</div></div>
+      <div class="stat"><div class="stat-num">66%</div><div class="stat-label">International<br>staff</div></div>
+    </div>
+    <p style="margin-top: 16px;">UPF is ranked <strong>1st in Spain and 22nd in Europe for physical sciences and engineering research</strong> (<a href="https://www.upf.edu/web/universitat/upf-als-rankings">CWTS Leiden Ranking 2025</a>), and <strong>3rd in Spain overall</strong> (Times Higher Education 2026). The Department of Engineering contributes to that result with European Research Council grants and ICREA researchers on staff.</p>
+    <p>The majority of our bachelor's subjects (around <strong>90%</strong>) are offered in English. Exchange students choose from a curated list of these subjects across all five degrees; the list specifies the language of instruction for each course so you can plan with confidence.</p>
+  </div>
+
+  <!-- The 5 bachelor's -->
+  <div class="content-block">
+    <h2 class="section-title">Our bachelor's programmes</h2>
+    <p>You can take subjects from any of our five bachelor's degrees, depending on availability and your home university's agreement:</p>
+    <ul class="degree-list">
+      <li><strong>Computer Engineering</strong>: algorithms, software engineering, systems, artificial intelligence, computer graphics.</li>
+      <li><strong>Telecommunications Network Engineering</strong>: signals, networks, wireless communications, optical networks, IoT.</li>
+      <li><strong>Audiovisual Systems Engineering</strong>: image and sound processing, computer graphics, computer vision, interaction.</li>
+      <li><strong>Biomedical Engineering</strong>: biosignals, medical imaging, biomechanics, biocomputing, medical devices.</li>
+      <li><strong>Mathematical Engineering on Data Science</strong>: statistics, machine learning, data mining, graphical models, visual analytics.</li>
+    </ul>
+    <p style="margin-top: 14px;">See <a href="in_2_academic.html">Academic information</a> for the full list of subjects open to incoming students, with codes, credits, terms and languages.</p>
+  </div>
+
+  <!-- How to apply -->
+  <div class="content-block">
+    <h2 class="section-title">How to apply</h2>
+    <p>Exchange applications at UPF are handled centrally by the <a href="https://www.upf.edu/web/incoming">International Office (Mobility Office, OMA)</a>. See their website for nomination dates, deadlines and the documents you'll need.</p>
+  </div>
+
+  <!-- Campus & Barcelona -->
+  <div class="content-block">
+    <h2 class="section-title">Poblenou Campus, in Barcelona's 22@ innovation district</h2>
+    <p>Our main campus is in <a href="https://www.upf.edu/web/campus/campus-poblenou">Poblenou</a>, a former industrial neighbourhood reinvented as Barcelona's technology and innovation district (22@). The campus is about a 20-minute walk from the Mediterranean beach, next to the Glòries transport hub, and around 20 minutes by metro from the historic city centre. The neighbourhood is home to the research headquarters of companies in software, media, biotech and design, and to a lively mix of cafés, co-working spaces and cultural venues.</p>
+    <p>Lectures for the four ICT bachelor's degrees (Computer Engineering, Telecommunications Network Engineering, Audiovisual Systems Engineering and Mathematical Engineering on Data Science) take place entirely at Poblenou Campus. The Bachelor's in Biomedical Engineering is divided between the Poblenou and <a href="https://www.upf.edu/web/campus/campus-mar">Mar</a> campuses; Mar Campus sits next to Hospital del Mar and is shared with the Faculty of Medicine and Life Sciences.</p>
+    <p>For practical information on living in Barcelona as a UPF student, see UPF's <a href="https://www.upf.edu/web/barcelona">Living in Barcelona</a> guide. To get a feel for the city itself, the Barcelona City Council's own <a href="https://www.meet.barcelona/en">Meet Barcelona</a> is a good starting point.</p>
+  </div>
+
+  <!-- CATStudies (moved from in_2) -->
+  <div class="content-block">
+    <h2 class="section-title">Learn Catalan while you're here</h2>
+    <p>UPF offers a specific qualification for students from outside the Catalan language domain: the <strong>UPF Diploma in Catalan Language and Cultural Studies</strong> (<a href="https://www.upf.edu/web/idiomesupf/diploma-catstudies">CATStudies</a>). It recognises the effort and dedication that incoming students put into learning Catalan language and culture during their stay, beyond the subjects of their main programmes.</p>
+    <p>If Barcelona or Catalonia interest you beyond your engineering studies, CATStudies is a good way to make your stay count twice.</p>
+  </div>
+
+  <!-- Contact -->
+  <!-- LIFERAY MIGRATION NOTE: this Contact block is repeated in incoming.html, in_1_why_upf.html and in_2_academic.html. When migrating to Liferay, create a single reusable Web Content asset for the Contact block and reference it from each page so it only needs to be edited in one place. -->
+  <h2 class="section-title">Contact</h2>
+  <div class="content-block">
+    <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top; width:45%;"><strong><a href="https://www.upf.edu/web/incoming">Mobility Office (OMA)</a></strong><br><span style="color:#666;">UPF-wide exchange office; applications, registration, transcripts and arrivals/departures</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:oma.incoming@upf.edu">oma.incoming@upf.edu</a><br>Poblenou Campus, office 52.001<br>T. +34 935 421 264</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top;"><strong>Mobility Coordinator, Alfonso Martínez</strong><br><span style="color:#666;">Academic questions and the Learning Agreement</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Poblenou Campus, office 55.204<br>T. +34 935 422 922</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; vertical-align:top;"><strong>School of Engineering Secretary</strong><br><span style="color:#666;">Syllabus, class schedules and exam dates</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> or <a href="https://cau.upf.edu/estudis">CAU</a><br>Poblenou Campus, office 55.014<br>T. +34 935 421 574</td>
+      </tr>
+    </table>
   </div>
 
   <a href="incoming.html" class="back-link">&larr; Back to Incoming Students</a>

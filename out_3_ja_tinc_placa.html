@@ -12,8 +12,14 @@ body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.
 .breadcrumb a { color: #c8102e; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
 h1.page-title { font-size: 1.5em; color: #333; margin: 16px 0 24px; }
+.hero { position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.hero-img { width: 100%; aspect-ratio: 21 / 7; object-fit: cover; display: block; }
+.hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.65)); padding: 32px 24px 18px; color: #fff; }
+.hero-title { font-size: 1.6em; font-weight: 700; margin-bottom: 4px; }
+.hero-subtitle { font-size: 0.9em; opacity: 0.85; }
 h2.section-title { font-size: 1.15em; color: #c8102e; border-bottom: 2px solid #c8102e; padding-bottom: 6px; margin: 28px 0 14px; }
 h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
+h4 { font-size: 1em; color: #555; margin: 16px 0 8px; font-weight: 600; }
 .content-block { background: #fff; border-radius: 6px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); font-size: 0.92em; line-height: 1.7; }
 .content-block ul, .content-block ol { margin: 8px 0 8px 20px; }
 .content-block a { color: #c8102e; }
@@ -34,106 +40,122 @@ h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
     <a href="#">Enginyeria</a> › <a href="#">Mobilitat</a> › <a href="outgoing.html">Estudiar fora</a> › Ja tinc plaça
   </nav>
 
-  <h1 class="page-title">Ja tinc plaça</h1>
+  <div class="hero">
+    <img class="hero-img" src="card_estudiar_fora.svg" alt="Mapa de destinacions">
+    <div class="hero-overlay">
+      <div class="hero-title">Ja tinc plaça</div>
+      <div class="hero-subtitle">Programes Erasmus+, SICUE i acords bilaterals</div>
+    </div>
+  </div>
 
   <!-- ══ Peça 5: Ja tinc una plaça de mobilitat ══ -->
   <div class="content-block">
     <h3>Ja tinc una plaça de mobilitat</h3>
-    <p>Un cop tinguis una plaça de mobilitat, hauràs de seguir els <strong><a href="https://www.upf.edu/web/estudiarfora/abans-de-marxar">4 passos</a></strong> que s'indiquen a la pàgina web de l'OMA. <a href="https://www.upf.edu/documents/1656590/243652518/Infog_Mobilitat.png/5a801e3e-f39c-07b7-4f10-61cac475f59a?t=1715068372910">Infografia resum</a>.</p>
-    <div class="callout">
-      <a href="https://www.upf.edu/web/estudiarfora/la-teva-sol-licitud-tots-els-estudis">Calendari de la teva sol·licitud</a>. Inclou totes les resolucions.
-    </div>
+    <p>Un cop tens plaça, hauràs de fer tràmits amb l'OMA (credencial, nominació al destí, ajuts i dades bancàries, assegurança, declaració responsable, matrícula a la universitat d'acollida, prova lingüística Erasmus…) i amb l'Escola d'Enginyeria (acord d'estudis, incloent-hi els reconeixements, i matrícula a la UPF). A la pàgina d'OMA <a href="https://www.upf.edu/web/estudiarfora/abans-de-marxar">«Abans de marxar»</a> trobaràs el llistat complet amb els terminis; aquí expliquem els que depenen de l'Escola.</p>
   </div>
 
-  <!-- ══ Peça 8: Fer l'acord d'estudis ══ -->
+  <!-- ══ Peça 8: Acord d'estudis ══ -->
   <div class="content-block">
-    <h2 class="section-title">Fer l'acord d'estudis</h2>
-    <p>Un cop tens assignada la plaça de mobilitat, has d'emplenar l'acord d'estudis amb les assignatures que cursaràs a la universitat de destinació. Un cop tinguis preparat l'acord, el coordinador de mobilitat te l'haurà d'aprovar i llavors el podreu signar.</p>
-    <p>Hi ha dues versions de l'acord d'estudis:</p>
+    <h2 class="section-title">Acord d'estudis</h2>
+    <p>L'acord d'estudis (<em>Learning Agreement</em>) és el document que detalla les assignatures que cursaràs a la universitat de destí i com es reconeixeran al teu expedient UPF. Un cop signat per tu, pel coordinador de mobilitat i per la universitat de destí, és un compromís entre les tres parts: si superes les assignatures pactades, la UPF te les reconeix. Sense acord aprovat no pots marxar de mobilitat.</p>
+    <p>El procés té quatre passos:</p>
+    <ol>
+      <li>Tria i verifica les assignatures.</li>
+      <li>Formalitza l'acord a la Secretaria Virtual.</li>
+      <li>Signa el Learning Agreement.</li>
+      <li>Envia'ns la versió signada.</li>
+    </ol>
+
+    <h3>1. Tria i verifica les assignatures</h3>
+    <p>És on es fa la feina principal de l'acord. Per decidir quines assignatures posar a l'acord, has de saber què es pot reconèixer al teu expedient UPF. Les assignatures cursades al destí poden reconèixer-se:</p>
     <ul>
-      <li>En <strong>català (Acord d'Estudis)</strong>: "Imprimir acord UPF", aprovat pel coordinador. No és necessari signar-lo, però <strong>ha d'estar aprovat abans que marxis de mobilitat.</strong></li>
-      <li>En <strong>anglès (Learning Agreement):</strong> "Imprimir acord uni destinació". Has de sol·licitar la signatura del coordinador (UPF) i de la universitat de destinació, a banda de signar-lo tu mateix/a. Ens l'has de <strong>retornar signat per les 3 parts durant les 4 primeres setmanes de la teva arribada a la universitat de destinació.</strong> Ens ho pots enviar per CAU o bé per correu electrònic a <a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a>.</li>
+      <li>Com a <strong>assignatures obligatòries o optatives</strong> del teu pla d'estudis (si el contingut hi correspon).</li>
+      <li>Com a <strong>crèdits optatius de mobilitat</strong> (contingut sense equivalència directa amb cap assignatura UPF). Quan introdueixis una assignatura d'aquest tipus a la Secretaria Virtual, utilitza els codis d'<a href="https://www.upf.edu/documents/1656590/243652518/Codis_assignatures_mobilitat_090924.pdf/f6bfd151-4bc4-210f-5484-e7ae88820d9e?t=1725883559004">aquest document</a>.</li>
     </ul>
-    <p>L'acord d'estudis ha d'estar aprovat pel coordinador de Mobilitat, Alfonso Martínez, a través de la Secretaria Virtual. Si hi fas alguna modificació durant la teva estada, cal que l'avisis per correu electrònic (coord-mobilitat.enginyeria@upf.edu) per tal que revisi els canvis i, si tot és correcte, aprovi el nou acord. En aquest cas, hauràs de tornar a descarregar el learning agreement i l'hauràs d'enviar a la secretaria, signat per totes les parts.</p>
-    <div class="alert-box">
-      En el següent <a href="https://www.upf.edu/documents/1656590/243652518/Codis_assignatures_mobilitat_090924.pdf/f6bfd151-4bc4-210f-5484-e7ae88820d9e?t=1725883559004">document</a> trobaràs els codis dels <strong>crèdits optatius de mobilitat</strong>. Si us plau, utilitza aquests codis quan facis l'acord.
-    </div>
-    <p><em>Nota: si modifiques l'acord durant l'estada, consulta també la secció corresponent a <a href="out_4_durant_despres.html">Durant i després de l'estada</a>.</em></p>
-  </div>
+    <p>El total de crèdits optatius de mobilitat està limitat pel teu <a href="https://www.upf.edu/web/enginyeria/graus">pla d'estudis</a>: <strong>Graus TIC: 20 ECTS · GEBM: 30 ECTS</strong> (al pla nou, <strong>30 ECTS</strong> per a tots els graus).</p>
 
-  <!-- ══ Peça 9: Vídeos explicatius ══ -->
-  <div class="content-block">
-    <h3>Vídeo explicatiu sobre com fer l'acord d'estudis</h3>
+    <h4>Com comprovar si una assignatura ja està reconeguda</h4>
+    <p>La <a href="https://docs.google.com/spreadsheets/d/18QvzdBXMBDhLBcxU4OUP2a96y-xlbbk68d9e2bJd2gQ">taula de reconeixements</a> recull les sol·licituds aprovades i denegades els cursos 2024-25 i 2025-26:</p>
+    <ul>
+      <li><strong style="color:#2e7d32;">Verd</strong> (aprovada): la pots incloure a l'acord sense fer cap sol·licitud. Si la cel·la conté un codi UPF, es reconeix per aquella assignatura; si no, com a crèdits optatius de mobilitat.</li>
+      <li><strong style="color:#c8102e;">Vermell</strong> (no aprovada): no es pot reconèixer per l'assignatura UPF indicada.</li>
+      <li><strong>No apareix</strong>: has de fer una sol·licitud (vegeu a continuació).</li>
+    </ul>
+    <p>La taula s'actualitza a mesura que s'aproven noves sol·licituds.</p>
+
+    <h4>Sol·licitud de nou reconeixement</h4>
+    <p>Si l'assignatura no apareix a la taula, pots sol·licitar-ne el reconeixement amb aquest <a href="https://script.google.com/macros/s/AKfycbwUo8MDNUg6ShK53eM4gOlGbapSAlTuQ9FzfXyaqggCltY7qfc14Ta4gPwDsHus_LiE/exec?authuser=0">formulari</a> (disponible en català, castellà i anglès). El procediment:</p>
+    <ol>
+      <li>Compara les guies docents de l'assignatura de destí i de l'assignatura UPF per la qual demanes el reconeixement.</li>
+      <li>Omple el <a href="https://script.google.com/macros/s/AKfycbwUo8MDNUg6ShK53eM4gOlGbapSAlTuQ9FzfXyaqggCltY7qfc14Ta4gPwDsHus_LiE/exec?authuser=0">formulari</a> amb les dades de les dues assignatures (necessitaràs l'enllaç a la guia docent de l'assignatura de destí).</li>
+      <li>El coordinador/a de l'assignatura UPF rep la sol·licitud i l'avalua.</li>
+      <li>Rebràs un correu amb la resolució (aprovada, no aprovada o sol·licitud d'informació addicional).</li>
+    </ol>
+    <p>Si tens dubtes sobre si una assignatura es pot reconèixer, parla'n amb el coordinador abans de fer la sol·licitud.</p>
+
+    <h3>2. Formalitza l'acord a la Secretaria Virtual</h3>
+    <p>Un cop tens el contingut acordat, introdueixes la proposta a la Secretaria Virtual i el coordinador de mobilitat, Alfonso Martínez, l'aprova. La Secretaria Virtual és el repositori de l'esborrany inicial i de qualsevol canvi posterior; també genera una versió en català de l'acord per al tràmit intern, però no cal que hi facis res. Els vídeos de sota mostren com emplenar la proposta pas a pas.</p>
+    <div style="background: #fff8e1; border: 1px dashed #d4a843; padding: 12px 16px; margin: 12px 0; font-size: 0.9em; color: #555; border-radius: 4px;">
+      <strong style="color: #8a6300;">PENDENT</strong> — Judit re-gravarà els vídeos. Els actuals descriuen un flux antic amb dues versions de l'acord; ara només cal treballar amb el Learning Agreement en anglès. Els nous vídeos haurien de cobrir també l'ús dels codis dels crèdits optatius de mobilitat (actualment menys del 10% dels estudiants els utilitza correctament). Mentrestant, els passos del vídeo referents a l'«acord UPF» es poden ignorar.
+    </div>
     <div class="video-row">
       <div>
-        <p><strong>Emplenar l'acord d'estudis: Erasmus</strong></p>
+        <p><strong>Emplenar la proposta: Erasmus</strong></p>
         <iframe src="https://www.youtube.com/embed/q83KQjJc7f8" allowfullscreen></iframe>
       </div>
       <div>
-        <p><strong>Emplenar l'acord d'estudis: Conveni Bilateral</strong></p>
+        <p><strong>Emplenar la proposta: Conveni Bilateral</strong></p>
         <iframe src="https://www.youtube.com/embed/WeOrqzrnP4Q" allowfullscreen></iframe>
       </div>
     </div>
-  </div>
 
-  <!-- ══ Peça 10: Reconeixement d'assignatures ══ -->
-  <div class="content-block">
-    <h2 class="section-title">Reconeixement d'assignatures</h2>
-    <p>Els reconeixements d'assignatures de mobilitat s'han de fer amb assignatures ofertades en el curs en el qual es fa l'intercanvi i que formi part del pla d'estudis del grau que estàs cursant. Pots cursar assignatures amb correspondència a la UPF:</p>
-    <ul>
-      <li>Com a assignatures obligatòries o optatives del teu pla d'estudis.</li>
-      <li>Com a crèdits optatius de mobilitat (contingut diferent a les assignatures de pla).</li>
-    </ul>
-    <p><a href="https://drive.google.com/file/d/1NorRjWbz65ES6LLAI9A-6u4wlbP1Cj55/view?usp=sharing">Consulta la taula de conversió de crèdits</a></p>
-    <p>Cal que tinguis present els crèdits mínims i màxims que pots matricular:</p>
-    <ul>
-      <li>Mínim: 15 crèdits per trimestre/semestre</li>
-      <li>Màxim: els crèdits optatius de mobilitat que marqui el <a href="https://www.upf.edu/web/enginyeria/graus">pla d'estudis</a> del teu grau (Graus TIC: 20 ECTS / GEBM: 30 ECTS).</li>
-    </ul>
-    <p><em>Nota: aquesta informació també apareix a <a href="out_4_durant_despres.html">Durant i després de l'estada</a>, on trobaràs el procediment de recepció de notes i conversió de qualificacions.</em></p>
-  </div>
+    <h3>3. Signa el Learning Agreement</h3>
+    <p>El coordinador descarrega el Learning Agreement en anglès, el signa i te l'envia. Llavors el signes tu i el fas signar per la universitat de destí.</p>
 
-  <!-- ══ Peça 11: Reconeixements — taula pública + formulari ══ -->
-  <div class="content-block">
-    <h3>Històric de reconeixements</h3>
-    <p>Si estàs interessat en <strong>reconèixer assignatures</strong> que facis a la universitat de destinació, consulta la <a href="https://docs.google.com/spreadsheets/d/18QvzdBXMBDhLBcxU4OUP2a96y-xlbbk68d9e2bJd2gQ"><strong>taula de reconeixements</strong></a>, on trobaràs tots els reconeixements sol·licitats durant els cursos 2024-25 i 2025-26. La taula utilitza un codi de colors: <strong style="color:#2e7d32;">verd</strong> per als reconeixements aprovats i <strong style="color:#c8102e;">vermell</strong> per als no aprovats.</p>
-    <ul>
-      <li>Si l'assignatura de la universitat de destí apareix en <strong style="color:#2e7d32;">verd</strong> (aprovada), pots incloure-la a l'acord d'estudis <strong>sense necessitat de fer cap sol·licitud</strong>. Si la cel·la conté un codi d'assignatura, es reconeix per aquella assignatura UPF; si no en conté, es reconeix com a crèdits optatius de mobilitat.</li>
-      <li>Si l'assignatura apareix en <strong style="color:#c8102e;">vermell</strong> (no aprovada), no pot ser reconeguda per l'assignatura UPF indicada.</li>
-      <li>Si l'assignatura <strong>no apareix</strong> a la taula, hauràs de fer una sol·licitud de reconeixement (veure a continuació).</li>
-    </ul>
-    <p>La taula s'actualitza a mesura que s'aproven noves sol·licituds al llarg del curs acadèmic.</p>
+    <h3>4. Envia'ns la versió signada</h3>
+    <p>Quan el tens signat per les tres parts, envia'ns-el durant les <strong>4 primeres setmanes d'arribada</strong> al destí, via <a href="https://cau.upf.edu/estudis">CAU</a> o a <a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a>.</p>
 
-    <h3>Sol·licitud de nou reconeixement</h3>
-    <p>Si l'assignatura que vols reconèixer no apareix a la taula de reconeixements, pots fer una sol·licitud a través del <a href="https://script.google.com/macros/s/AKfycbwUo8MDNUg6ShK53eM4gOlGbapSAlTuQ9FzfXyaqggCltY7qfc14Ta4gPwDsHus_LiE/exec?authuser=0"><strong>formulari de sol·licitud de reconeixement</strong></a>.</p>
-    <p>El procediment és el següent:</p>
-    <ol>
-      <li>Assegura't que el reconeixement és possible comparant detingudament les guies docents de les assignatures.</li>
-      <li>Omple el <a href="https://script.google.com/macros/s/AKfycbwUo8MDNUg6ShK53eM4gOlGbapSAlTuQ9FzfXyaqggCltY7qfc14Ta4gPwDsHus_LiE/exec?authuser=0">formulari</a> amb les dades de l'assignatura de destí i l'assignatura UPF per la qual vols el reconeixement.</li>
-      <li>El coordinador/a de l'assignatura UPF rebrà la teva sol·licitud i l'avaluarà.</li>
-      <li>Rebràs un correu electrònic amb la resolució (aprovada, no aprovada, o sol·licitud d'informació addicional).</li>
-    </ol>
-    <div class="callout">
-      El formulari està disponible en català, castellà i anglès. Necessitaràs l'enllaç a la guia docent de l'assignatura de la universitat de destí.
+    <div style="background: #fff8e1; border: 1px dashed #d4a843; padding: 12px 16px; margin: 16px 0; font-size: 0.9em; color: #555; border-radius: 4px;">
+      <strong style="color: #8a6300;">PENDENT</strong> — <strong>SICUE</strong>: confirmar si el flux és el mateix (proposta a la Secretaria Virtual + aprovació del coordinador + document signat per les tres parts). Els estudiants de SICUE apareixen a Sigma, així que el tràmit intern sembla idèntic, però el PDF i els terminis poden diferir.
     </div>
   </div>
 
   <!-- ══ Peça 20: Matrícula (part pre-sortida) ══ -->
   <div class="content-block">
-    <h2 class="section-title">Matrícula</h2>
-    <p>Punts a tenir en compte:</p>
-    <ol>
-      <li>Des de la Secretaria et matricularem dels crèdits que constin a l'<strong>acord</strong> d'estudis que tens signat. T'informarem per correu electrònic un cop s'hagi actualitzat el teu expedient.</li>
-      <li><strong>Si has demanat beca:</strong> un cop tinguis incorporats els crèdits al teu expedient, i en el cas que rebis la notificació del Ministeri conforme et falten crèdits per arribar al mínim exigit per tenir dret a la beca (a partir del mes de desembre, en endavant) hauràs de presentar una al·legació a la unitat de beques de la UPF a través del <a href="https://agaur.gencat.cat/web/.content/Documents/AGAUR/Model_recurs_allegacio_nou_logo_2018.pdf">formulari</a> que trobaràs a la pàgina web de l'AGAUR (pots presentar-la per correu electrònic a beques@upf.edu) sempre abans que passi un mes a comptar des de la data de resolució de la sol·licitud de la beca. Per a qualsevol aclariment, pots contactar amb la Unitat d'Ajuts a l'Estudi.</li>
-      <li><strong>Si no ets becari:</strong> no és necessari que matriculis els crèdits de mobilitat al juliol, farem l'ampliació des de l'Àmbit de Docència un cop tornis.</li>
-      <li>En cas que tinguis una <strong>assignatura suspesa</strong> i te'n vagis d'intercanvi, has de consultar la Guia Docent de l'Assignatura per si és compatible cursar-la a distància. Si no ho és, caldrà que la matriculis el curs següent amb el corresponent recàrrec.</li>
-      <li>Si acabes el grau aquest curs i només et queden pendents les pràctiques i/o la mobilitat, cal tenir l'<strong>expedient viu</strong> i, per tant, has de matricular algun crèdit optatiu.</li>
-    </ol>
-    <div class="alert-box">
-      <strong>IMPORTANT MATRÍCULA:</strong> Per gaudir de la teva plaça de mobilitat has de matricular-te <strong>com a mínim d'una assignatura a la UPF</strong> durant el curs que facis l'estada per tal de constar com a estudiant UPF i poder fer l'estada de mobilitat. La matrícula l'has de realitzar en el termini establert de matrícula (juliol) i has abonar les taxes corresponents.<br><br>
-      A més de matricular-te d'aquelles assignatures que saps amb certesa que cursaràs a la UPF, <strong>també estàs obligat a matricular les assignatures obligatòries i de formació bàsica no superades.</strong> Si marxes tot el curs acadèmic i no tens pendent cap assignatura obligatòria o de formació bàsica no superada, pots matricular-te d'una optativa del 3r trimestre. Si tens la <strong>condició de becari</strong> consulta la informació sobre beques en aquesta mateixa pàgina.
-    </div>
-    <p><em>Nota: per a la incorporació de notes a l'expedient un cop tornis, consulta <a href="out_4_durant_despres.html">Durant i després de l'estada</a>.</em></p>
+    <h2 class="section-title">Matrícula a la UPF (juliol, abans de marxar)</h2>
+    <p>Al juliol et matricules a la UPF (amb les taxes corresponents) per mantenir-te com a estudiant UPF i poder fer l'estada. Què has de matricular:</p>
+    <ul>
+      <li>Com a mínim, <strong>una assignatura a la UPF</strong>.</li>
+      <li>Totes les <strong>assignatures obligatòries i de formació bàsica no superades</strong>.</li>
+      <li>Si marxes tot el curs i no en tens cap pendent, pots matricular una <strong>optativa del 3r trimestre</strong>.</li>
+    </ul>
+    <p>No matricules al juliol les assignatures que cursaràs al destí: la Secretaria les incorporarà a l'expedient un cop rebi les notes (vegeu <a href="out_4_durant_despres.html">Durant i després de l'estada</a>).</p>
+    <p>Casos particulars:</p>
+    <ul>
+      <li><strong>Assignatura suspesa + mobilitat</strong>: consulta la Guia Docent per si es pot cursar a distància. Si no, hauràs de matricular-la el curs següent amb el recàrrec corresponent.</li>
+      <li><strong>Acabes el grau aquest curs</strong> i només et queden pendents les pràctiques i/o la mobilitat: has de matricular algun crèdit optatiu per mantenir l'<strong>expedient viu</strong>.</li>
+    </ul>
+  </div>
+
+
+  <!-- Contacte -->
+  <!-- LIFERAY MIGRATION NOTE: el bloc de contacte es repeteix a outgoing.html, out_1_vull_marxar.html, out_2_convocatories.html, out_3_ja_tinc_placa.html i out_4_durant_despres.html. En migrar a Liferay, crea un únic Web Content reutilitzable per al bloc i referencia'l des de cada pàgina perquè només calgui editar-lo en un lloc. -->
+  <h2 class="section-title">Contacte i suport</h2>
+  <div class="content-block">
+    <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top; width:45%;"><strong>OMA (Oficina de Mobilitat i Acollida)</strong><br><span style="color:#666;">Convocatòria i resolució places mobilitat, beques, requisits idiomes, Erasmus pràctiques</span></td>
+        <td style="padding:8px 0; vertical-align:top;">Consultes via <a href="https://cau.upf.edu/estudis">CAU</a><br>T. +34 935 422 411 (dilluns a dimecres, 10.00–12.00 h)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top;"><strong>Coordinador de mobilitat, Alfonso Martínez</strong><br><span style="color:#666;">Assessorament acadèmic: reconeixements, contingut d'assignatures, qualificacions</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Campus Poblenou, despatx 55.204<br>T. +34 935 422 922</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; vertical-align:top;"><strong>Secretaria de l'Escola d'Enginyeria</strong><br><span style="color:#666;">Matrícula d'assignatures, recepció i incorporació de notes a l'expedient</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> o <a href="https://cau.upf.edu/estudis">CAU</a><br>Campus Poblenou, despatx 55.014<br>T. +34 935 422 667</td>
+      </tr>
+    </table>
   </div>
 
   <a href="outgoing.html" class="back-link">← Tornar a Estudiar fora</a>

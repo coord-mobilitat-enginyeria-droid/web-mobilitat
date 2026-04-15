@@ -128,7 +128,7 @@ h2.section-title {
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .hero-title { font-size: 1.3em; }
-  .info-cards { grid-template-columns: 1fr 1fr; }
+  .info-cards { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -150,51 +150,54 @@ h2.section-title {
     </div>
   </div>
 
-  <!-- 4 cards de navegació -->
+  <!-- 2 cards de navegació (flat layout) -->
   <div class="info-cards">
     <a class="info-card" href="in_1_why_upf.html">
       <div class="info-card-icon">&#127891;</div>
       <h3>Why UPF Engineering?</h3>
-      <p>Programmes, campus and Barcelona</p>
+      <p>School, degrees, campus and how to apply</p>
     </a>
-    <a class="info-card" href="in_2_how_to_apply.html">
-      <div class="info-card-icon">&#128221;</div>
-      <h3>How to apply</h3>
-      <p>Nomination, deadlines and requirements</p>
-    </a>
-    <a class="info-card" href="in_3_prepare_stay.html">
+    <a class="info-card" href="in_2_academic.html">
       <div class="info-card-icon">&#128218;</div>
-      <h3>Prepare your stay</h3>
-      <p>Courses, Learning Agreement and visa</p>
-    </a>
-    <a class="info-card" href="in_4_during_after.html">
-      <div class="info-card-icon">&#9992;&#65039;</div>
-      <h3>During &amp; after</h3>
-      <p>Orientation, support and transcript</p>
+      <h3>Academic information</h3>
+      <p>Subjects, calendar, exams and transcripts</p>
     </a>
   </div>
 
-  <!-- ══ Peça 19: Contact information ══ -->
+  <!-- TEMP: accordion-version cards for layout comparison with reviewers -->
+  <p style="font-size: 0.8em; color: #888; margin: 24px 0 8px;">↓ Alternative layout: same content, sections collapsed by default</p>
+  <div class="info-cards" style="opacity: 0.85;">
+    <a class="info-card" href="in_1_why_upf_acc.html" style="border-top-color: #888;">
+      <div class="info-card-icon">&#127891;</div>
+      <h3>Why UPF Engineering? <span style="font-weight:400; color:#888;">(accordion)</span></h3>
+      <p>Same content, click to expand each section</p>
+    </a>
+    <a class="info-card" href="in_2_academic_acc.html" style="border-top-color: #888;">
+      <div class="info-card-icon">&#128218;</div>
+      <h3>Academic information <span style="font-weight:400; color:#888;">(accordion)</span></h3>
+      <p>Same content, click to expand each section</p>
+    </a>
+  </div>
+
+  <!-- ══ Peça 19: Contact information (always displayed) ══ -->
+  <!-- LIFERAY MIGRATION NOTE: this Contact block is repeated in incoming.html, in_1_why_upf.html and in_2_academic.html. When migrating to Liferay, create a single reusable Web Content asset for the Contact block and reference it from each page so it only needs to be edited in one place. -->
   <h2 class="section-title">Contact</h2>
 
-  <div class="accordion open">
-    <button class="accordion-header">Who to contact</button>
-    <div class="accordion-body">
-      <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
-        <tr style="border-bottom:1px solid #eee;">
-          <td style="padding:8px 0; vertical-align:top; width:45%;"><strong><a href="https://www.upf.edu/web/incoming">Mobility Office (OMA)</a></strong><br><span style="color:#666;">Registration, adding and dropping subjects, transcripts and confirmation of arrivals/departures</span></td>
-          <td style="padding:8px 0; vertical-align:top;"><a href="mailto:oma.incoming@upf.edu">oma.incoming@upf.edu</a><br>Ciutadella Campus, office 40.167<br>Poblenou Campus, office 52.001<br>Phone (+34) 935 421 264</td>
-        </tr>
-        <tr style="border-bottom:1px solid #eee;">
-          <td style="padding:8px 0; vertical-align:top;"><strong>Mobility coordinator, Alfonso Martínez</strong><br><span style="color:#666;">Academic information about subjects, curricular issues and signing learning agreements</span></td>
-          <td style="padding:8px 0; vertical-align:top;"><a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Poblenou Campus, office 55.204<br>Phone 935 422 922</td>
-        </tr>
-        <tr>
-          <td style="padding:8px 0; vertical-align:top;"><strong>School of Engineering Secretary</strong><br><span style="color:#666;">Information regarding syllabus, lecture and exams schedules</span></td>
-          <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> or <a href="https://cau.upf.edu/estudis">CAU</a><br>Poblenou Campus, office 55.014<br>Phone 935 421 574</td>
-        </tr>
-      </table>
-    </div>
+  <div class="content-block">
+    <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top; width:45%;"><strong><a href="https://www.upf.edu/web/incoming">Mobility Office (OMA)</a></strong><br><span style="color:#666;">UPF-wide exchange office; applications, registration, transcripts and arrivals/departures</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:oma.incoming@upf.edu">oma.incoming@upf.edu</a><br>Poblenou Campus, office 52.001<br>T. +34 935 421 264</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top;"><strong>Mobility Coordinator, Alfonso Martínez</strong><br><span style="color:#666;">Academic questions and the Learning Agreement</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Poblenou Campus, office 55.204<br>T. +34 935 422 922</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; vertical-align:top;"><strong>School of Engineering Secretary</strong><br><span style="color:#666;">Syllabus, class schedules and exam dates</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> or <a href="https://cau.upf.edu/estudis">CAU</a><br>Poblenou Campus, office 55.014<br>T. +34 935 421 574</td>
+      </tr>
+    </table>
   </div>
 
   <!-- Tornar -->

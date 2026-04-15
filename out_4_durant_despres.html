@@ -12,6 +12,11 @@ body { font-family: "Open Sans", Arial, sans-serif; color: #333; line-height: 1.
 .breadcrumb a { color: #c8102e; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
 h1.page-title { font-size: 1.5em; color: #333; margin: 16px 0 24px; }
+.hero { position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.hero-img { width: 100%; aspect-ratio: 21 / 7; object-fit: cover; display: block; }
+.hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.65)); padding: 32px 24px 18px; color: #fff; }
+.hero-title { font-size: 1.6em; font-weight: 700; margin-bottom: 4px; }
+.hero-subtitle { font-size: 0.9em; opacity: 0.85; }
 h2.section-title { font-size: 1.15em; color: #c8102e; border-bottom: 2px solid #c8102e; padding-bottom: 6px; margin: 28px 0 14px; }
 h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
 .content-block { background: #fff; border-radius: 6px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); font-size: 0.92em; line-height: 1.7; }
@@ -29,7 +34,13 @@ h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
     <a href="#">Enginyeria</a> › <a href="#">Mobilitat</a> › <a href="outgoing.html">Estudiar fora</a> › Durant i després
   </nav>
 
-  <h1 class="page-title">Durant i després de l'estada</h1>
+  <div class="hero">
+    <img class="hero-img" src="card_estudiar_fora.svg" alt="Mapa de destinacions">
+    <div class="hero-overlay">
+      <div class="hero-title">Durant i després de l'estada</div>
+      <div class="hero-subtitle">Programes Erasmus+, SICUE i acords bilaterals</div>
+    </div>
+  </div>
 
   <!-- ══ Peça 8 (fragment): Modificacions a l'acord durant l'estada ══ -->
   <div class="content-block">
@@ -46,12 +57,7 @@ h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
       <li>Com a assignatures obligatòries o optatives del teu pla d'estudis.</li>
       <li>Com a crèdits optatius de mobilitat (contingut diferent a les assignatures de pla).</li>
     </ul>
-    <p><a href="https://drive.google.com/file/d/1NorRjWbz65ES6LLAI9A-6u4wlbP1Cj55/view?usp=sharing">Consulta la taula de conversió de crèdits</a></p>
-    <p>Cal que tinguis present els crèdits mínims i màxims que pots matricular:</p>
-    <ul>
-      <li>Mínim: 15 crèdits per trimestre/semestre</li>
-      <li>Màxim: els crèdits optatius de mobilitat que marqui el <a href="https://www.upf.edu/web/enginyeria/graus">pla d'estudis</a> del teu grau (Graus TIC: 20 ECTS / GEBM: 30 ECTS).</li>
-    </ul>
+    <p><a href="https://drive.google.com/file/d/1NorRjWbz65ES6LLAI9A-6u4wlbP1Cj55/view?usp=sharing">Consulta la taula de conversió de crèdits</a>.</p>
     <p><em>Informació completa sobre històric de reconeixements i procediment de sol·licitud a <a href="out_3_ja_tinc_placa.html">Ja tinc plaça</a>.</em></p>
   </div>
 
@@ -63,19 +69,41 @@ h3 { font-size: 1.05em; color: #333; margin: 20px 0 10px; }
     <p>No s'acceptaran certificats de notes directament dels estudiants, tret que tinguin el <a href="https://seuelectronica.upf.edu/validacio-de-documents">Codi Segur de Verificació</a> (CSV).</p>
 
     <h3>Conversió de notes i qualificacions</h3>
+    <!-- TODO: integrar aquí la "taula de conversió de crèdits" (ratio d'ECTS) https://drive.google.com/file/d/1NorRjWbz65ES6LLAI9A-6u4wlbP1Cj55/view?usp=sharing — abans vivia a out_3, però pertany aquí al costat de la conversió de notes. -->
     <p>A partir del curs 2024-25 les conversions de notes de les universitats de destí al sistema de notes de l'Escola d'Enginyeria de la UPF es calculen fent servir la fórmula que trobareu en el següent <a href="https://www.upf.edu/documents/d/enginyeria/conversionsnoteserasmus_170925-pdf">document</a>.</p>
     <p>Només s'introduiran a l'expedient UPF les notes de les assignatures que apareguin a l'acord d'estudis que l'estudiant té signat per totes les parts. D'altra banda, si no es reben les <strong>Guies Docents</strong>, no s'entraran les assignatures a l'expedient de l'estudiant.</p>
   </div>
 
-  <!-- ══ Peça 20 (fragment post-tornada): Matrícula — aspectes post-estada ══ -->
+  <!-- ══ Incorporació de crèdits i matrícula post-estada ══ -->
   <div class="content-block">
-    <h3>Matrícula — aspectes post-estada</h3>
-    <p><strong>Si no ets becari:</strong> no és necessari que matriculis els crèdits de mobilitat al juliol, farem l'ampliació des de l'Àmbit de Docència un cop tornis.</p>
-    <p>Si acabes el grau aquest curs i només et queden pendents les pràctiques i/o la mobilitat, cal tenir l'<strong>expedient viu</strong> i, per tant, has de matricular algun crèdit optatiu.</p>
-    <p><em>Per a la informació completa sobre matrícula (becaris, assignatures suspeses, alerta matrícula mínima), consulta <a href="out_3_ja_tinc_placa.html">Ja tinc plaça</a>.</em></p>
+    <h2 class="section-title">Incorporació de crèdits a l'expedient i matrícula post-estada</h2>
+    <p>Un cop rebem el certificat de notes i tenim l'acord signat per les tres parts, la Secretaria t'incorpora els crèdits que constin a l'acord al teu expedient. T'informarem per correu electrònic quan estigui fet.</p>
+    <p>Si <strong>no ets becari</strong>, no cal que matriculis al juliol els crèdits que cursaràs al destí: l'ampliació la fa l'Àmbit de Docència un cop tornes.</p>
+    <p>Si <strong>has demanat beca</strong> i el Ministeri et notifica (a partir de desembre) que et falten crèdits per arribar al mínim exigit, presenta una al·legació a través del <a href="https://agaur.gencat.cat/web/.content/Documents/AGAUR/Model_recurs_allegacio_nou_logo_2018.pdf">formulari</a> de l'AGAUR (a <a href="mailto:beques@upf.edu">beques@upf.edu</a>) abans que passi un mes des de la resolució de la sol·licitud de beca. Per a qualsevol aclariment, contacta amb la Unitat d'Ajuts a l'Estudi.</p>
     <div class="callout">
       El no compliment del mínim de <strong>15 crèdits</strong> a incorporar i aprovar podrà comportar el retorn de la beca.
     </div>
+  </div>
+
+
+  <!-- Contacte -->
+  <!-- LIFERAY MIGRATION NOTE: el bloc de contacte es repeteix a outgoing.html, out_1_vull_marxar.html, out_2_convocatories.html, out_3_ja_tinc_placa.html i out_4_durant_despres.html. En migrar a Liferay, crea un únic Web Content reutilitzable per al bloc i referencia'l des de cada pàgina perquè només calgui editar-lo en un lloc. -->
+  <h2 class="section-title">Contacte i suport</h2>
+  <div class="content-block">
+    <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top; width:45%;"><strong>OMA (Oficina de Mobilitat i Acollida)</strong><br><span style="color:#666;">Convocatòria i resolució places mobilitat, beques, requisits idiomes, Erasmus pràctiques</span></td>
+        <td style="padding:8px 0; vertical-align:top;">Consultes via <a href="https://cau.upf.edu/estudis">CAU</a><br>T. +34 935 422 411 (dilluns a dimecres, 10.00–12.00 h)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:8px 0; vertical-align:top;"><strong>Coordinador de mobilitat, Alfonso Martínez</strong><br><span style="color:#666;">Assessorament acadèmic: reconeixements, contingut d'assignatures, qualificacions</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:coord-mobilitat.enginyeria@upf.edu">coord-mobilitat.enginyeria@upf.edu</a><br>Campus Poblenou, despatx 55.204<br>T. +34 935 422 922</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0; vertical-align:top;"><strong>Secretaria de l'Escola d'Enginyeria</strong><br><span style="color:#666;">Matrícula d'assignatures, recepció i incorporació de notes a l'expedient</span></td>
+        <td style="padding:8px 0; vertical-align:top;"><a href="mailto:mobilitat.enginyeria@upf.edu">mobilitat.enginyeria@upf.edu</a> o <a href="https://cau.upf.edu/estudis">CAU</a><br>Campus Poblenou, despatx 55.014<br>T. +34 935 422 667</td>
+      </tr>
+    </table>
   </div>
 
   <a href="outgoing.html" class="back-link">← Tornar a Estudiar fora</a>
