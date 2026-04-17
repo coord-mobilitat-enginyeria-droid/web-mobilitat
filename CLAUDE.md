@@ -96,3 +96,22 @@ El flux de treball és: crear la web en local → compartir amb secretaria → s
 - Editor Liferay té mode "Source" per pegar HTML
 - Servei web gestionat per Factoria (Biblioteca i Informàtica), peticions via CAU
 - Nom oficial en anglès: "School of Engineering"
+
+## Propostes futures
+
+### Automatitzar l'extracció d'assignatures incoming dins del Sheet
+
+Actualment l'extracció dels codis TIC+GEBM oferts a incoming es fa amb Python
+local (`extract_incoming_codes.py`, `crosscheck_incoming.py`) sobre un xlsx
+baixat manualment del Sheet d'OD. Es pot moure dins del propi Google Sheet amb
+Apps Script:
+
+- `Range.getFontColors()` i `Range.getFontLines()` donen accés al color i al
+  strikethrough, que és la lògica clau (codi negre = primari; strike =
+  descartat).
+- Afegir un menú `Incoming → Generar llista` que escrigui els codis en un full
+  nou i exporti xlsx via `DriveApp.getFileById(...).getBlob()`.
+- La part de cross-check amb la web és fràgil (Liferay canvia templates).
+  **Millor invertir el flux**: la web consumeix el Sheet publicat (File →
+  Publish to web com a CSV) en lloc que un script consulti la web. Així la
+  veritat viu a Secretaria i la web sempre està alineada per construcció.
